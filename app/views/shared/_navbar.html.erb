@@ -1,0 +1,40 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><%= link_to "Home Page", "/static_pages/index" %> <span class="sr-only">(current)</span></li>
+        <li><%= link_to "About", "/static_pages/about" %></li>
+        <li><%= link_to "Contact", "/static_pages/contact" %></li>
+      </ul>
+      <ul class="nav pull-right">
+        <li>
+          <% if user_signed_in? %>
+           <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+           <% else %>
+           <%= link_to('Login', new_user_session_path) %>
+           <% end %>
+        </li>
+
+      </ul>
+      <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <%= form_tag("/products", method: "post") do %>
+            <%= label_tag(:q, "Search for") %>
+            <%= text_field_tag(:q) %>
+            <%= button_tag(type: 'button', class: 'btn btn-classic') do
+            content_tag(:normal, 'Seach in this app...')
+          end %>
+          <% end %>
+        </div>
+      </form>
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<!-- <p id="notice"><%= notice %></p> -->

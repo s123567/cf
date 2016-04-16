@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="col-md-12 text-center">
+    <h1>PLEASE LOGIN TO ENTER YOUR SESSION</h1>
+    <h3>Or sign up !</h3>
+  </div>
+  <div class="col-md-12 text-center">
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="form-group">
+        <span class="glyphicon glyphicon-envelope" aria-hidden="true">  </span>
+        <%= f.email_field :email, autofocus: true, :placeholder => "Email" %>
+      </div>
+
+      <div class="form-group">
+        <span class="glyphicon glyphicon-barcode" aria-hidden="true">  </span>
+        <%= f.password_field :password, autocomplete: "off", :placeholder => "password" %>
+      </div>
+
+      <% if devise_mapping.rememberable? -%>
+        <div class="field">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me %>
+        </div>
+      <% end -%>
+        <button type="submit" class="btn btn-success">Log in</button>
+      <% end %>
+      <br>
+      <%= render "devise/shared/links" %>
+
+  </div>
+
+</div>

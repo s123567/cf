@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>App2</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+
+  <%= render "shared/navbar" %>
+
+<div class="container">
+  <% if notice %>
+  <p id="notice" class="alert alert-success"><%= notice %></p>
+  <% end %>
+
+  <% if alert %>
+  <p id="alert" class="alert alert-warning"><%= alert %></p>
+  <% end %>
+
+</div>
+
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Welcome to my shop</h1>
+
+      <h2>Here...products everywhere</h2>
+
+      <div class="container">
+        <div class="col-md-4">
+            <%= image_tag("big_guitar_1.jpg", class: 'img-responsive img-thumbnail') %>
+        </div>
+        <div class="col-md-4">
+            <%= image_tag("guitar_2.jpg", class: 'img-responsive img-thumbnail') %>
+        </div>
+        <div class="col-md-4">
+            <%= image_tag("big_guitar_3.jpg", class: 'img-responsive img-thumbnail') %>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+<%= yield %>
+
+  <%= render "shared/footer" %>
+
+</body>
+</html>
