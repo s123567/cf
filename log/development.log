@@ -1,0 +1,1543 @@
+
+
+Started GET "/" for ::1 at 2016-04-16 22:50:49 +0200
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.4) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (127.3ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (102.8ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (232.5ms)
+  [1m[36m (2.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateProducts (20151122161046)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "products" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "image_url" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151122161046"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to AddColorToProducts (20151122164547)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "products" ADD "color" varchar
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151122164547"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Migrating to CreateOrders (20151123063616)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "orders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "product_id" integer, "total" float) 
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_orders_on_user_id" ON "orders" ("user_id")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_orders_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_orders_on_user_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_orders_on_product_id" ON "orders" ("product_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151123063616"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateUsers (20151207061624)
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151207061624"]]
+  [1m[36m (4.2ms)[0m  [1mcommit transaction[0m
+Migrating to AddDeviseToUsers (20151207062505)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "users" ADD "email" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "encrypted_password" varchar DEFAULT '' NOT NULL
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "reset_password_token" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "reset_password_sent_at" datetime
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "remember_created_at" datetime[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "sign_in_count" integer DEFAULT 0 NOT NULL
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "current_sign_in_at" datetime[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "last_sign_in_at" datetime
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "current_sign_in_ip" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "last_sign_in_ip" varchar
+  [1m[36m (1.6ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151207062505"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreateComments (20151210072348)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "body" text, "rating" integer, "product_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  CREATE  INDEX "index_comments_on_user_id" ON "comments" ("user_id")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_comments_on_product_id" ON "comments" ("product_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151210072348"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Migrating to AddAdminFlagToUsers (20160115152856)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "users" ADD "admin" boolean DEFAULT 'f' NOT NULL
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160115152856"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_product_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_product_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_comments_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_orders_on_product_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_orders_on_product_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_orders_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_orders_on_user_id' AND type='index'
+[0m
+  [1m[35m (1.5ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+
+
+Started GET "/" for ::1 at 2016-04-16 22:51:21 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#index as HTML
+  Rendered static_pages/index.html.erb within layouts/application (0.6ms)
+  Rendered shared/_navbar.html.erb (9.0ms)
+  Rendered shared/_footer.html.erb (1.1ms)
+Completed 200 OK in 2505ms (Views: 2489.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.raty.self-87ed0aee892c20d60b699b233626d04034355bea2c9d0d27b7586c39cb9ba493.css?body=1" for ::1 at 2016-04-16 22:51:24 +0200
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-16 22:51:24 +0200
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-16 22:51:24 +0200
+
+
+Started GET "/assets/scaffolds.self-4ce5826ddf67021db0b263731dce0c94fb070e6208746a8b07e42a50c96b5e9d.css?body=1" for ::1 at 2016-04-16 22:51:24 +0200
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-16 22:51:24 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-16 22:51:24 +0200
+
+
+Started GET "/assets/application.self-fb425eec47ba5077dbccd0b1eea85639d863b5a3463d857a3b55dd631cd5260c.css?body=1" for ::1 at 2016-04-16 22:51:24 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-04-16 22:51:24 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-04-16 22:51:24 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-16 22:51:24 +0200
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-16 22:51:24 +0200
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for ::1 at 2016-04-16 22:51:24 +0200
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-16 22:51:24 +0200
+
+
+Started GET "/assets/site.self-f16ef45e28d80c85d264c0673a2a7d2aee804718a04340de53142b0463af6073.js?body=1" for ::1 at 2016-04-16 22:51:24 +0200
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-16 22:51:24 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-16 22:51:24 +0200
+
+
+Started GET "/assets/application.self-48483440a6c9d141116d6f620fd5d37a567ce39b7eb2fb4007cefe49d3d6b27b.js?body=1" for ::1 at 2016-04-16 22:51:24 +0200
+
+
+Started GET "/assets/big_guitar_1-780a78f7ede0ac58fe6b3221f873d08edb79218d8101f9d3698628346315bb06.jpg" for ::1 at 2016-04-16 22:51:24 +0200
+
+
+Started GET "/assets/guitar_2-4d2b49a663c454ee2d1fd7b5628b720da065c93e6ac08824c735cdf6037fd017.jpg" for ::1 at 2016-04-16 22:51:25 +0200
+
+
+Started GET "/assets/big_guitar_3-726fd1009ef759d82bf388f4e85afc5880a9b717c8342077e6fb1219359bd2b4.jpg" for ::1 at 2016-04-16 22:51:25 +0200
+
+
+Started GET "/products" for ::1 at 2016-04-16 23:04:32 +0200
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.8ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/index.html.erb within layouts/application (4.8ms)
+  Rendered shared/_navbar.html.erb (1.4ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 511ms (Views: 501.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-16 23:04:33 +0200
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-16 23:04:33 +0200
+
+
+Started GET "/products/new" for ::1 at 2016-04-16 23:04:41 +0200
+Processing by ProductsController#new as HTML
+  Rendered products/_form.html.erb (51.6ms)
+  Rendered products/new.html.erb within layouts/application (56.6ms)
+  Rendered shared/_navbar.html.erb (2.6ms)
+  Rendered shared/_footer.html.erb (0.7ms)
+Completed 200 OK in 212ms (Views: 203.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/products" for ::1 at 2016-04-16 23:04:48 +0200
+Processing by ProductsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xXVg9ETb7YA1vSgWdIAo11+ZB12khLz3j/6OYKZRPL4GbQaI7HcrpOhJkEmknu8yMCY+/enfUblawM2MbjC/hA==", "product"=>{"name"=>"gfgfg", "description"=>"fgfgfgfg", "image_url"=>"", "color"=>"blue"}, "commit"=>"Create Product"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.9ms)[0m  INSERT INTO "products" ("name", "description", "image_url", "color", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["name", "gfgfg"], ["description", "fgfgfgfg"], ["image_url", ""], ["color", "blue"], ["created_at", "2016-04-16 21:04:48.654932"], ["updated_at", "2016-04-16 21:04:48.654932"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/products/1
+Completed 302 Found in 12ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/products/1" for ::1 at 2016-04-16 23:04:48 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_stripe_checkout_button.html.erb (0.5ms)
+  [1m[36mComment Load (0.7ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 2 OFFSET 0[0m  [["product_id", 1]]
+  Rendered shared/_comments.html.erb (3.9ms)
+  Rendered shared/_new_comment.html.erb (1.7ms)
+  [1m[35m (0.3ms)[0m  SELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (21.6ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.1ms)
+Completed 200 OK in 221ms (Views: 155.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/images/star-off.png" for ::1 at 2016-04-16 23:04:49 +0200
+
+
+Started GET "/128x128.png" for ::1 at 2016-04-16 23:04:51 +0200
+
+ActionController::RoutingError (No route matches [GET] "/128x128.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.9ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.8ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (6.3ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (521.3ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (148.0ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (360.6ms)
+
+
+Started GET "/128x128.png" for ::1 at 2016-04-16 23:04:53 +0200
+
+ActionController::RoutingError (No route matches [GET] "/128x128.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (7.8ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (178.8ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (142.8ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (286.3ms)
+
+
+Started GET "/products/1" for ::1 at 2016-04-16 23:18:04 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_stripe_checkout_button.html.erb (0.1ms)
+  [1m[35mComment Load (0.7ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 2 OFFSET 0  [["product_id", 1]]
+  Rendered shared/_comments.html.erb (1.8ms)
+  Rendered shared/_new_comment.html.erb (0.6ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (14.2ms)
+  Rendered shared/_navbar.html.erb (1.7ms)
+  Rendered shared/_footer.html.erb (0.9ms)
+Completed 200 OK in 210ms (Views: 186.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-16 23:18:05 +0200
+
+
+Started GET "/assets/jquery.raty.self-87ed0aee892c20d60b699b233626d04034355bea2c9d0d27b7586c39cb9ba493.css?body=1" for ::1 at 2016-04-16 23:18:05 +0200
+
+
+Started GET "/assets/scaffolds.self-4ce5826ddf67021db0b263731dce0c94fb070e6208746a8b07e42a50c96b5e9d.css?body=1" for ::1 at 2016-04-16 23:18:05 +0200
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-16 23:18:05 +0200
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-16 23:18:05 +0200
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-16 23:18:05 +0200
+
+
+Started GET "/assets/application.self-fb425eec47ba5077dbccd0b1eea85639d863b5a3463d857a3b55dd631cd5260c.css?body=1" for ::1 at 2016-04-16 23:18:05 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-04-16 23:18:05 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-16 23:18:05 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-04-16 23:18:05 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-16 23:18:05 +0200
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-16 23:18:05 +0200
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for ::1 at 2016-04-16 23:18:05 +0200
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-16 23:18:05 +0200
+
+
+Started GET "/assets/site.self-f16ef45e28d80c85d264c0673a2a7d2aee804718a04340de53142b0463af6073.js?body=1" for ::1 at 2016-04-16 23:18:05 +0200
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-16 23:18:05 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-16 23:18:05 +0200
+
+
+Started GET "/assets/application.self-48483440a6c9d141116d6f620fd5d37a567ce39b7eb2fb4007cefe49d3d6b27b.js?body=1" for ::1 at 2016-04-16 23:18:05 +0200
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-16 23:18:05 +0200
+
+
+Started GET "/assets/guitar_2-4d2b49a663c454ee2d1fd7b5628b720da065c93e6ac08824c735cdf6037fd017.jpg" for ::1 at 2016-04-16 23:18:05 +0200
+
+
+Started GET "/assets/big_guitar_3-726fd1009ef759d82bf388f4e85afc5880a9b717c8342077e6fb1219359bd2b4.jpg" for ::1 at 2016-04-16 23:18:05 +0200
+
+
+Started GET "/assets/big_guitar_1-780a78f7ede0ac58fe6b3221f873d08edb79218d8101f9d3698628346315bb06.jpg" for ::1 at 2016-04-16 23:18:05 +0200
+
+
+Started GET "/assets/images/star-off.png" for ::1 at 2016-04-16 23:18:06 +0200
+
+
+Started GET "/128x128.png" for ::1 at 2016-04-16 23:18:07 +0200
+
+ActionController::RoutingError (No route matches [GET] "/128x128.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (15.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (167.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (98.1ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (233.9ms)
+
+
+Started GET "/128x128.png" for ::1 at 2016-04-16 23:18:09 +0200
+
+ActionController::RoutingError (No route matches [GET] "/128x128.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (10.2ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.0ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (243.9ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (198.4ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (362.3ms)
+
+
+Started POST "/payments/create" for ::1 at 2016-04-16 23:18:36 +0200
+
+ActionController::RoutingError (No route matches [POST] "/payments/create"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.9ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (142.1ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (90.1ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (202.5ms)
+
+
+Started POST "/payments/create" for ::1 at 2016-04-16 23:21:56 +0200
+
+ActionController::RoutingError (No route matches [POST] "/payments/create"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (170.4ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (108.3ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (231.2ms)
+
+
+Started GET "/payment/create" for ::1 at 2016-04-16 23:24:16 +0200
+
+ActionController::RoutingError (No route matches [GET] "/payment/create"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (149.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (97.1ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (214.9ms)
+
+
+Started GET "/128x128.png" for ::1 at 2016-04-16 23:24:26 +0200
+
+ActionController::RoutingError (No route matches [GET] "/128x128.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.0ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (164.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (92.8ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (209.6ms)
+
+
+Started GET "/128x128.png" for ::1 at 2016-04-16 23:24:28 +0200
+
+ActionController::RoutingError (No route matches [GET] "/128x128.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.1ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.4ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (294.8ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (97.8ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (247.4ms)
+
+
+Started POST "/payments/create" for ::1 at 2016-04-16 23:24:47 +0200
+
+ActionController::RoutingError (No route matches [POST] "/payments/create"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (147.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (91.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (205.6ms)
+
+
+Started POST "/payments/create" for ::1 at 2016-04-16 23:25:09 +0200
+Processing by PaymentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RXFA2V4AWENj/yb800b8z5Tek/maN++6fQb3F1z+jguGaSal9qyeZ74LnqMDWDsq+2GqWddsAvSoOLT7lJ8NMQ==", "product_id"=>"1", "stripeToken"=>"tok_1810uHGKflvIKKU1ZTjrgfpm", "stripeTokenType"=>"card", "stripeEmail"=>"fgf@kh.com"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+ArgumentError (wrong number of arguments (given 0, expected 3)):
+  app/controllers/payments_controller.rb:2:in `create'
+
+
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (114.1ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (97.1ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.4ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (215.1ms)
+
+
+Started POST "/payments/create" for ::1 at 2016-04-16 23:25:41 +0200
+
+SyntaxError (/Users/mathieuchiron/Desktop/Wagon/ruby/cf_cloned/app/controllers/payments_controller.rb:2: formal argument cannot be an instance variable
+	def create(@product_id, @user_id, @total)
+	                      ^
+/Users/mathieuchiron/Desktop/Wagon/ruby/cf_cloned/app/controllers/payments_controller.rb:2: formal argument cannot be an instance variable
+	def create(@product_id, @user_id, @total)
+	                                ^
+/Users/mathieuchiron/Desktop/Wagon/ruby/cf_cloned/app/controllers/payments_controller.rb:2: formal argument cannot be an instance variable
+	def create(@product_id, @user_id, @total)
+	                                        ^):
+  app/controllers/payments_controller.rb:2: formal argument cannot be an instance variable
+  app/controllers/payments_controller.rb:2: formal argument cannot be an instance variable
+  app/controllers/payments_controller.rb:2: formal argument cannot be an instance variable
+
+
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.3ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (112.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (96.3ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (212.6ms)
+
+
+Started POST "/payments/create" for ::1 at 2016-04-16 23:26:03 +0200
+Processing by PaymentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RXFA2V4AWENj/yb800b8z5Tek/maN++6fQb3F1z+jguGaSal9qyeZ74LnqMDWDsq+2GqWddsAvSoOLT7lJ8NMQ==", "product_id"=>"1", "stripeToken"=>"tok_1810uHGKflvIKKU1ZTjrgfpm", "stripeTokenType"=>"card", "stripeEmail"=>"fgf@kh.com"}
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `product' for #<PaymentsController:0x007f9969c3d278>
+Did you mean?  product_url):
+  app/controllers/payments_controller.rb:4:in `create'
+
+
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (136.4ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (98.1ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (218.0ms)
+
+
+Started POST "/payments/create" for ::1 at 2016-04-16 23:26:30 +0200
+Processing by PaymentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RXFA2V4AWENj/yb800b8z5Tek/maN++6fQb3F1z+jguGaSal9qyeZ74LnqMDWDsq+2GqWddsAvSoOLT7lJ8NMQ==", "product_id"=>"1", "stripeToken"=>"tok_1810uHGKflvIKKU1ZTjrgfpm", "stripeTokenType"=>"card", "stripeEmail"=>"fgf@kh.com"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `params' for nil:NilClass):
+  app/controllers/payments_controller.rb:4:in `create'
+
+
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.1ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (18.8ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (123.8ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (111.2ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (246.1ms)
+
+
+Started POST "/payments/create" for ::1 at 2016-04-16 23:26:48 +0200
+Processing by PaymentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RXFA2V4AWENj/yb800b8z5Tek/maN++6fQb3F1z+jguGaSal9qyeZ74LnqMDWDsq+2GqWddsAvSoOLT7lJ8NMQ==", "product_id"=>"1", "stripeToken"=>"tok_1810uHGKflvIKKU1ZTjrgfpm", "stripeTokenType"=>"card", "stripeEmail"=>"fgf@kh.com"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `params' for nil:NilClass):
+  app/controllers/payments_controller.rb:4:in `create'
+
+
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.4ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (117.4ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (95.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (211.8ms)
+
+
+Started POST "/payments/create" for ::1 at 2016-04-16 23:28:06 +0200
+Processing by PaymentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RXFA2V4AWENj/yb800b8z5Tek/maN++6fQb3F1z+jguGaSal9qyeZ74LnqMDWDsq+2GqWddsAvSoOLT7lJ8NMQ==", "product_id"=>"1", "stripeToken"=>"tok_1810uHGKflvIKKU1ZTjrgfpm", "stripeTokenType"=>"card", "stripeEmail"=>"fgf@kh.com"}
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `params' for #<Class:0x007f9966bada90>):
+  app/controllers/payments_controller.rb:4:in `create'
+
+
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.1ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (14.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (126.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (99.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (214.7ms)
+
+
+Started POST "/payments/create" for ::1 at 2016-04-16 23:28:55 +0200
+Processing by PaymentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RXFA2V4AWENj/yb800b8z5Tek/maN++6fQb3F1z+jguGaSal9qyeZ74LnqMDWDsq+2GqWddsAvSoOLT7lJ8NMQ==", "product_id"=>"1", "stripeToken"=>"tok_1810uHGKflvIKKU1ZTjrgfpm", "stripeTokenType"=>"card", "stripeEmail"=>"fgf@kh.com"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 1097ms (ActiveRecord: 1.0ms)
+
+Stripe::InvalidRequestError (Invalid currency: €€€. Stripe currently supports these currencies: usd, aed, afn, all, amd, ang, aoa, ars, aud, awg, azn, bam, bbd, bdt, bgn, bif, bmd, bnd, bob, brl, bsd, bwp, bzd, cad, cdf, chf, clp, cny, cop, crc, cve, czk, djf, dkk, dop, dzd, egp, etb, eur, fjd, fkp, gbp, gel, gip, gmd, gnf, gtq, gyd, hkd, hnl, hrk, htg, huf, idr, ils, inr, isk, jmd, jpy, kes, kgs, khr, kmf, krw, kyd, kzt, lak, lbp, lkr, lrd, lsl, ltl, mad, mdl, mga, mkd, mnt, mop, mro, mur, mvr, mwk, mxn, myr, mzn, nad, ngn, nio, nok, npr, nzd, pab, pen, pgk, php, pkr, pln, pyg, qar, ron, rsd, rub, rwf, sar, sbd, scr, sek, sgd, shp, sll, sos, srd, std, svc, szl, thb, tjs, top, try, ttd, twd, tzs, uah, ugx, uyu, uzs, vnd, vuv, wst, xaf, xcd, xof, xpf, yer, zar, zmw, eek, lvl, vef):
+  app/controllers/payments_controller.rb:9:in `create'
+
+
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.3ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (118.1ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (94.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (207.5ms)
+
+
+Started POST "/payments/create" for ::1 at 2016-04-16 23:29:14 +0200
+Processing by PaymentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RXFA2V4AWENj/yb800b8z5Tek/maN++6fQb3F1z+jguGaSal9qyeZ74LnqMDWDsq+2GqWddsAvSoOLT7lJ8NMQ==", "product_id"=>"1", "stripeToken"=>"tok_1810uHGKflvIKKU1ZTjrgfpm", "stripeTokenType"=>"card", "stripeEmail"=>"fgf@kh.com"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 847ms (ActiveRecord: 1.0ms)
+
+Stripe::InvalidRequestError (Invalid currency: eur. You can change your account to process transactions in eur by adding a bank account for this currency at https://dashboard.stripe.com/account. Your account currently supports these currencies: cad, usd.):
+  app/controllers/payments_controller.rb:9:in `create'
+
+
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.2ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (109.2ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (89.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (200.3ms)
+
+
+Started POST "/payments/create" for ::1 at 2016-04-16 23:29:30 +0200
+Processing by PaymentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RXFA2V4AWENj/yb800b8z5Tek/maN++6fQb3F1z+jguGaSal9qyeZ74LnqMDWDsq+2GqWddsAvSoOLT7lJ8NMQ==", "product_id"=>"1", "stripeToken"=>"tok_1810uHGKflvIKKU1ZTjrgfpm", "stripeTokenType"=>"card", "stripeEmail"=>"fgf@kh.com"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 1885ms (ActiveRecord: 1.0ms)
+
+NameError (undefined local variable or method `product_id' for #<PaymentsController:0x007f9968910ec0>
+Did you mean?  product_url
+               products_url
+               product_path
+               products_path
+               proc
+               @product):
+  app/controllers/payments_controller.rb:17:in `create'
+
+
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.9ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (118.4ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (91.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (205.0ms)
+
+
+Started POST "/payments/create" for ::1 at 2016-04-16 23:30:38 +0200
+Processing by PaymentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RXFA2V4AWENj/yb800b8z5Tek/maN++6fQb3F1z+jguGaSal9qyeZ74LnqMDWDsq+2GqWddsAvSoOLT7lJ8NMQ==", "product_id"=>"1", "stripeToken"=>"tok_1810uHGKflvIKKU1ZTjrgfpm", "stripeTokenType"=>"card", "stripeEmail"=>"fgf@kh.com"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 1502ms (ActiveRecord: 1.0ms)
+
+Stripe::InvalidRequestError (You cannot use a Stripe token more than once: tok_1810uHGKflvIKKU1ZTjrgfpm.):
+  app/controllers/payments_controller.rb:9:in `create'
+
+
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.8ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (112.2ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (96.2ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (233.6ms)
+
+
+Started POST "/payments/create" for ::1 at 2016-04-16 23:30:56 +0200
+Processing by PaymentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RXFA2V4AWENj/yb800b8z5Tek/maN++6fQb3F1z+jguGaSal9qyeZ74LnqMDWDsq+2GqWddsAvSoOLT7lJ8NMQ==", "product_id"=>"1", "stripeToken"=>"tok_1810uHGKflvIKKU1ZTjrgfpm", "stripeTokenType"=>"card", "stripeEmail"=>"fgf@kh.com"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 1229ms (ActiveRecord: 1.0ms)
+
+Stripe::InvalidRequestError (You cannot use a Stripe token more than once: tok_1810uHGKflvIKKU1ZTjrgfpm.):
+  app/controllers/payments_controller.rb:9:in `create'
+
+
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.0ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (114.2ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (91.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (204.4ms)
+
+
+Started GET "/products" for ::1 at 2016-04-16 23:31:07 +0200
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT "products".* FROM "products"[0m
+  Rendered products/_product.html.erb (4.5ms)
+  Rendered products/index.html.erb within layouts/application (9.4ms)
+  Rendered shared/_navbar.html.erb (1.1ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 162ms (Views: 161.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products/1" for ::1 at 2016-04-16 23:31:10 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_stripe_checkout_button.html.erb (0.4ms)
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 2 OFFSET 0[0m  [["product_id", 1]]
+  Rendered shared/_comments.html.erb (2.2ms)
+  Rendered shared/_new_comment.html.erb (1.1ms)
+  [1m[35m (0.2ms)[0m  SELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (18.9ms)
+  Rendered shared/_navbar.html.erb (1.0ms)
+  Rendered shared/_footer.html.erb (0.3ms)
+Completed 200 OK in 167ms (Views: 156.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/images/star-off.png" for ::1 at 2016-04-16 23:31:10 +0200
+
+
+Started GET "/128x128.png" for ::1 at 2016-04-16 23:31:13 +0200
+
+ActionController::RoutingError (No route matches [GET] "/128x128.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.9ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.3ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (172.1ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (114.8ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (249.1ms)
+
+
+Started POST "/payments/create" for ::1 at 2016-04-16 23:31:45 +0200
+Processing by PaymentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YJNvr/+CelAB1fwzHITghsa34GgqO9Qqm1ZIgw/tS/ajiwnTVy68dNwhRGzMmidjqQjZyGdgOWROaAtvx4zIzA==", "product_id"=>"1", "stripeToken"=>"tok_181110GKflvIKKU10ubBJrMv", "stripeTokenType"=>"card", "stripeEmail"=>"d@fg.com"}
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 1658ms (ActiveRecord: 0.3ms)
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/controllers/payments_controller.rb:17:in `create'
+
+
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.8ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (108.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (90.0ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (202.9ms)
+
+
+Started POST "/payments/create" for ::1 at 2016-04-16 23:32:47 +0200
+Processing by PaymentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YJNvr/+CelAB1fwzHITghsa34GgqO9Qqm1ZIgw/tS/ajiwnTVy68dNwhRGzMmidjqQjZyGdgOWROaAtvx4zIzA==", "product_id"=>"1", "stripeToken"=>"tok_181110GKflvIKKU10ubBJrMv", "stripeTokenType"=>"card", "stripeEmail"=>"d@fg.com"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 1261ms (ActiveRecord: 1.2ms)
+
+Stripe::InvalidRequestError (You cannot use a Stripe token more than once: tok_181110GKflvIKKU10ubBJrMv.):
+  app/controllers/payments_controller.rb:9:in `create'
+
+
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.3ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (112.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (91.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (207.5ms)
+
+
+Started POST "/payments/create" for ::1 at 2016-04-16 23:34:36 +0200
+Processing by PaymentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YJNvr/+CelAB1fwzHITghsa34GgqO9Qqm1ZIgw/tS/ajiwnTVy68dNwhRGzMmidjqQjZyGdgOWROaAtvx4zIzA==", "product_id"=>"1", "stripeToken"=>"tok_181110GKflvIKKU10ubBJrMv", "stripeTokenType"=>"card", "stripeEmail"=>"d@fg.com"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 1.0ms)
+
+NameError (undefined local variable or method `user' for #<PaymentsController:0x007f9967057140>
+Did you mean?  @user):
+  app/controllers/payments_controller.rb:12:in `create'
+
+
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.4ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (123.1ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (104.4ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (229.0ms)
+
+
+Started POST "/payments/create" for ::1 at 2016-04-16 23:34:48 +0200
+Processing by PaymentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YJNvr/+CelAB1fwzHITghsa34GgqO9Qqm1ZIgw/tS/ajiwnTVy68dNwhRGzMmidjqQjZyGdgOWROaAtvx4zIzA==", "product_id"=>"1", "stripeToken"=>"tok_181110GKflvIKKU10ubBJrMv", "stripeTokenType"=>"card", "stripeEmail"=>"d@fg.com"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.1ms)
+
+NoMethodError (undefined method `id' for nil:NilClass):
+  app/controllers/payments_controller.rb:12:in `create'
+
+
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (108.2ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (93.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (209.7ms)
+
+
+Started POST "/payments/create" for ::1 at 2016-04-16 23:35:00 +0200
+Processing by PaymentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YJNvr/+CelAB1fwzHITghsa34GgqO9Qqm1ZIgw/tS/ajiwnTVy68dNwhRGzMmidjqQjZyGdgOWROaAtvx4zIzA==", "product_id"=>"1", "stripeToken"=>"tok_181110GKflvIKKU10ubBJrMv", "stripeTokenType"=>"card", "stripeEmail"=>"d@fg.com"}
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 1282ms (ActiveRecord: 1.0ms)
+
+Stripe::InvalidRequestError (Must provide source or customer.):
+  app/controllers/payments_controller.rb:9:in `create'
+
+
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.2ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (111.9ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (91.0ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (203.4ms)
+
+
+Started POST "/payments/create" for ::1 at 2016-04-16 23:35:47 +0200
+Processing by PaymentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YJNvr/+CelAB1fwzHITghsa34GgqO9Qqm1ZIgw/tS/ajiwnTVy68dNwhRGzMmidjqQjZyGdgOWROaAtvx4zIzA==", "product_id"=>"1", "stripeToken"=>"tok_181110GKflvIKKU10ubBJrMv", "stripeTokenType"=>"card", "stripeEmail"=>"d@fg.com"}
+  [1m[35mProduct Load (0.4ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 1559ms (ActiveRecord: 1.2ms)
+
+Stripe::InvalidRequestError (You cannot use a Stripe token more than once: tok_181110GKflvIKKU10ubBJrMv.):
+  app/controllers/payments_controller.rb:9:in `create'
+
+
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (109.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (93.4ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (207.4ms)
+
+
+Started POST "/payments/create" for ::1 at 2016-04-16 23:38:44 +0200
+Processing by PaymentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YJNvr/+CelAB1fwzHITghsa34GgqO9Qqm1ZIgw/tS/ajiwnTVy68dNwhRGzMmidjqQjZyGdgOWROaAtvx4zIzA==", "product_id"=>"1", "stripeToken"=>"tok_181110GKflvIKKU10ubBJrMv", "stripeTokenType"=>"card", "stripeEmail"=>"d@fg.com"}
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 2038ms (ActiveRecord: 1.0ms)
+
+Stripe::InvalidRequestError (You cannot use a Stripe token more than once: tok_181110GKflvIKKU10ubBJrMv.):
+  app/controllers/payments_controller.rb:9:in `create'
+
+
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.9ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (110.3ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (90.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (203.4ms)
+
+
+Started POST "/payments/create" for ::1 at 2016-04-16 23:47:20 +0200
+Processing by PaymentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YJNvr/+CelAB1fwzHITghsa34GgqO9Qqm1ZIgw/tS/ajiwnTVy68dNwhRGzMmidjqQjZyGdgOWROaAtvx4zIzA==", "product_id"=>"1", "stripeToken"=>"tok_181110GKflvIKKU10ubBJrMv", "stripeTokenType"=>"card", "stripeEmail"=>"d@fg.com"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 1430ms (ActiveRecord: 1.1ms)
+
+Stripe::InvalidRequestError (You cannot use a Stripe token more than once: tok_181110GKflvIKKU10ubBJrMv.):
+  app/controllers/payments_controller.rb:10:in `create'
+
+
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.2ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (114.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (94.2ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (218.9ms)
+
+
+Started POST "/payments/create" for ::1 at 2016-04-16 23:50:43 +0200
+Processing by PaymentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YJNvr/+CelAB1fwzHITghsa34GgqO9Qqm1ZIgw/tS/ajiwnTVy68dNwhRGzMmidjqQjZyGdgOWROaAtvx4zIzA==", "product_id"=>"1", "stripeToken"=>"tok_181110GKflvIKKU10ubBJrMv", "stripeTokenType"=>"card", "stripeEmail"=>"d@fg.com"}
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 1354ms (ActiveRecord: 1.6ms)
+
+Stripe::InvalidRequestError (You cannot use a Stripe token more than once: tok_181110GKflvIKKU10ubBJrMv.):
+  app/controllers/payments_controller.rb:11:in `create'
+
+
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.8ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (112.3ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (93.8ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (206.0ms)
+
+
+Started GET "/products" for ::1 at 2016-04-16 23:51:11 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT "products".* FROM "products"
+  Rendered products/_product.html.erb (3.6ms)
+  Rendered products/index.html.erb within layouts/application (23.5ms)
+  Rendered shared/_navbar.html.erb (57.7ms)
+  Rendered shared/_footer.html.erb (1.0ms)
+Completed 200 OK in 630ms (Views: 606.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery.raty.self-87ed0aee892c20d60b699b233626d04034355bea2c9d0d27b7586c39cb9ba493.css?body=1" for ::1 at 2016-04-16 23:51:12 +0200
+
+
+Started GET "/assets/payments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-16 23:51:12 +0200
+
+
+Started GET "/assets/products.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-16 23:51:12 +0200
+
+
+Started GET "/assets/scaffolds.self-4ce5826ddf67021db0b263731dce0c94fb070e6208746a8b07e42a50c96b5e9d.css?body=1" for ::1 at 2016-04-16 23:51:12 +0200
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-16 23:51:12 +0200
+
+
+Started GET "/assets/application.self-fb425eec47ba5077dbccd0b1eea85639d863b5a3463d857a3b55dd631cd5260c.css?body=1" for ::1 at 2016-04-16 23:51:12 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-16 23:51:12 +0200
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-04-16 23:51:12 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-04-16 23:51:12 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-04-16 23:51:12 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-04-16 23:51:12 +0200
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-16 23:51:12 +0200
+
+
+Started GET "/assets/jquery.raty.self-628421be04f36f7a8fa8b9b884c6d7824d6f8bdeba4f172b131f15aa63f713e8.js?body=1" for ::1 at 2016-04-16 23:51:12 +0200
+
+
+Started GET "/assets/payments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-16 23:51:12 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-16 23:51:12 +0200
+
+
+Started GET "/assets/products.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-16 23:51:12 +0200
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-04-16 23:51:12 +0200
+
+
+Started GET "/assets/site.self-f16ef45e28d80c85d264c0673a2a7d2aee804718a04340de53142b0463af6073.js?body=1" for ::1 at 2016-04-16 23:51:12 +0200
+
+
+Started GET "/assets/application.self-48483440a6c9d141116d6f620fd5d37a567ce39b7eb2fb4007cefe49d3d6b27b.js?body=1" for ::1 at 2016-04-16 23:51:12 +0200
+
+
+Started GET "/assets/big_guitar_1-780a78f7ede0ac58fe6b3221f873d08edb79218d8101f9d3698628346315bb06.jpg" for ::1 at 2016-04-16 23:51:12 +0200
+
+
+Started GET "/assets/guitar_2-4d2b49a663c454ee2d1fd7b5628b720da065c93e6ac08824c735cdf6037fd017.jpg" for ::1 at 2016-04-16 23:51:12 +0200
+
+
+Started GET "/assets/big_guitar_3-726fd1009ef759d82bf388f4e85afc5880a9b717c8342077e6fb1219359bd2b4.jpg" for ::1 at 2016-04-16 23:51:12 +0200
+
+
+Started GET "/products/1" for ::1 at 2016-04-16 23:51:15 +0200
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_stripe_checkout_button.html.erb (0.6ms)
+  [1m[35mComment Load (0.4ms)[0m  SELECT  "comments".* FROM "comments" WHERE "comments"."product_id" = ?  ORDER BY created_at DESC LIMIT 2 OFFSET 0  [["product_id", 1]]
+  Rendered shared/_comments.html.erb (3.3ms)
+  Rendered shared/_new_comment.html.erb (1.3ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT AVG("comments"."rating") FROM "comments" WHERE "comments"."product_id" = ?[0m  [["product_id", 1]]
+  Rendered products/show.html.erb within layouts/application (22.2ms)
+  Rendered shared/_navbar.html.erb (2.2ms)
+  Rendered shared/_footer.html.erb (1.0ms)
+Completed 200 OK in 211ms (Views: 156.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/images/star-off.png" for ::1 at 2016-04-16 23:51:16 +0200
+
+
+Started GET "/128x128.png" for ::1 at 2016-04-16 23:51:24 +0200
+
+ActionController::RoutingError (No route matches [GET] "/128x128.png"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/mathieuchiron/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (19.0ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (333.3ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (109.6ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/mathieuchiron/.rvm/gems/ruby-2.3.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (262.5ms)
+
+
+Started POST "/payments/create" for ::1 at 2016-04-16 23:51:57 +0200
+Processing by PaymentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"axNY8LDVOh4fE5Sz+Wv8n8+xGRWJ0D8SYmo8gTK8tbuoCz6MGHn8OsLnLOwpdTt6oA4gtcSL0ly3VH9t+t02gQ==", "product_id"=>"1", "stripeToken"=>"tok_1811KXGKflvIKKU1TRqJSMbg", "stripeTokenType"=>"card", "stripeEmail"=>"f@fg.com"}
+  [1m[35mProduct Load (0.2ms)[0m  SELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "orders" ("total") VALUES (?)  [["total", 354.0]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  Rendered payments/create.html.erb within layouts/application (0.7ms)
+  Rendered shared/_navbar.html.erb (1.3ms)
+  Rendered shared/_footer.html.erb (0.2ms)
+Completed 200 OK in 2171ms (Views: 172.5ms | ActiveRecord: 5.1ms)
