@@ -13,7 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery.imageLens
 //= require_tree .
+
 
 // Fade out and apparition delay of teh alert clas ofr notices and alerts
 $(document).ready(function(){
