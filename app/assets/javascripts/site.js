@@ -7,6 +7,7 @@ score: function() {
 	}
 	});
 
+$('#review-of-product').prepend(<%= j render @comment %>);
   
   $(".aspect").imageLens();
 
