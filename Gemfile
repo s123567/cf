@@ -25,6 +25,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'cancancan'
 
+gem 'dalli'
+
 
 # Gem for pagination
 gem 'will_paginate'
