@@ -14,6 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require jquery.imageLens
+
+//= require angular
+//= require angular-resource
 //= require_tree .
 
 

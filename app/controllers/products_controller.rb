@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+  respond_to :json, :html
 
   # GET /products
   # GET /products.json
@@ -10,17 +11,20 @@ class ProductsController < ApplicationController
     else
       @products = Product.all #in params #2 exercise, it is not product.limit(3) anymore
     end
+    respond_with @products
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
     @comments = @product.comments.order("created_at DESC").paginate(:page => params[:page], :per_page => 2)
+    respond_with @product
   end
 
   # GET /products/new
   def new
     @product = Product.new
+    respond_with @product
   end
 
   # GET /products/1/edit
@@ -41,6 +45,7 @@ class ProductsController < ApplicationController
         format.json { render json: @product.errors, status: :unprocessable_entity }
       end
     end
+
   end
 
   # PATCH/PUT /products/1
@@ -55,6 +60,7 @@ class ProductsController < ApplicationController
         format.json { render json: @product.errors, status: :unprocessable_entity }
       end
     end
+
   end
 
   # DELETE /products/1
