@@ -10,7 +10,7 @@ app.factory('models', ['$resource', function(){
 	var products_model = $resource("/products/:id.json", {id: "@id"});
 
 	var x = {
-		orders: orders_model
+		orders: orders_model,
 		products: products_model
 	};
 	return x;

@@ -27,6 +27,8 @@ gem 'cancancan'
 
 gem 'dalli'
 
+gem 'redis-rails'
+
 
 # Gem for pagination
 gem 'will_paginate'
