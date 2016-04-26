@@ -6,8 +6,6 @@ score: function() {
   return $(this).attr('data-score');
 	}
 	});
-
-$('#review-of-product').prepend(<%= j render @comment %>);
   
   $(".aspect").imageLens();
 
